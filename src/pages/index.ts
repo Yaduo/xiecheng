@@ -1,0 +1,5 @@
+export * from './Home'
+export * from './Register'
+export * from './Search'
+export * from './SignIn'
+export * from './Detail'
