@@ -9,6 +9,26 @@ export const Detail: React.FC = () => {
         header
       </header>
 
+      <div>
+        商品简介
+      </div>
+
+      <div>
+        日期选择
+      </div>
+
+      <div>
+        商品详情
+      </div>
+
+      <div>
+        商品评价
+      </div>
+
+      <div>
+        商品评论
+      </div>
+
       <footer>
         footer
       </footer>
