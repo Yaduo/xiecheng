@@ -1,9 +1,12 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
+import { DatePicker } from 'antd';
 
 export const Home: React.FC = () => {
   return (
    <div className="home-page">
+      
+      <DatePicker />
       
       <header>
         header

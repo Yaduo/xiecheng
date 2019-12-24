@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 import './index.css';
-import 'semantic-ui-css/semantic.min.css'
+import 'antd/dist/antd.css'; 
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
