@@ -76,7 +76,7 @@ export const MainLayout: React.FC<PropsType> = (props) => {
         </Menu>
         <div className="page-content">
           { props.breadcrumbItems 
-          ? <Breadcrumb>
+          ? <Breadcrumb style={{marginTop: 20}}>
               {props.breadcrumbItems.map((item, index) => 
                 <Breadcrumb.Item key={`breadcrumb-item-${index}`}>{item}</Breadcrumb.Item>
               )} 

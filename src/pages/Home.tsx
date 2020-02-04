@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Home.less"
-import { MainLayout } from '../components'
+import { Row, Col, Carousel } from 'antd';
+import { MainLayout, Sider } from '../components'
 
 export const Home: React.FC = () => {
   return (
@@ -8,9 +9,27 @@ export const Home: React.FC = () => {
       breadcrumbItems={['首页', "旅游", "国内游"]}
     >
       <div className="home-page">
-        <div>
-        幻灯片
-        </div>
+        <Row style={{marginTop: 20}}>
+          <Col span={6}>
+            <Sider />
+          </Col>
+          <Col span={18}>
+            <Carousel autoplay>
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+            </Carousel>
+          </Col>
+        </Row>
         <div>
           爆款推荐
         </div>
