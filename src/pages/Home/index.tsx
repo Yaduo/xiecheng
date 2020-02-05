@@ -1,12 +1,12 @@
 import React from 'react';
 import "./Home.less"
 import { Row, Col, Carousel } from 'antd';
-import { MainLayout, Sider, ProductCollection } from '../../components'
+import { MainLayout, Sider, ProductCollection, BusinessPartners } from '../../components'
 
 import sideImage from '../../assets/images/sider_2019_12-09.png';
 import sideImage2 from '../../assets/images/sider_2019_02-04.png';
 import sideImage3 from '../../assets/images/sider_2019_02-04-2.png';
-import { productList1, productList2, productList3 } from './mockup';
+import { productList1, productList2, productList3, partnerList } from './mockup';
 
 export const Home: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
       breadcrumbItems={['首页', "旅游", "国内游"]}
     >
       <div className="home-page">
-
+        {/* 幻灯片产品推荐 */}
         <Row style={{marginTop: 20}}>
           <Col span={6}>
             <Sider />
@@ -37,6 +37,7 @@ export const Home: React.FC = () => {
           </Col>
         </Row>
 
+        {/* 幻灯片产品推荐 */}
         <div style={{marginTop: 30}}>
           <ProductCollection 
             title='爆款推荐'
@@ -44,7 +45,6 @@ export const Home: React.FC = () => {
             products={productList1}
           />
         </div>
-
         <div style={{marginTop: 40}}>
           <ProductCollection 
             title='新品上市'
@@ -52,7 +52,6 @@ export const Home: React.FC = () => {
             products={productList2}
           />
         </div>
-
         <div style={{marginTop: 40}}>
           <ProductCollection 
             title='国内游推荐'
@@ -61,8 +60,11 @@ export const Home: React.FC = () => {
           />
         </div>
 
-        <div>
-          合作企业
+        {/* 企业合作 */}
+        <div style={{marginTop: 40}}>
+          <BusinessPartners 
+            partners={partnerList}
+          />
         </div>
      </div>
     </MainLayout>

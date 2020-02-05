@@ -1,3 +1,4 @@
+// 首页推荐产品图片
 import producImage0 from '../../assets/images/shanghai-2446326_640.jpg';
 import producImage1 from '../../assets/images/castle-1736779_640.jpg';
 import producImage2 from '../../assets/images/louvre-102840_640.jpg';
@@ -11,8 +12,15 @@ import producImage9 from '../../assets/images/osaka-castle-1398116_640.jpg';
 import producImage10 from '../../assets/images/railroad-tracks-163518_640.jpg';
 import producImage11 from '../../assets/images/symbol-600334_640.jpg';
 import producImage12 from '../../assets/images/louvre-102840_640.jpg';
+// 首页合作企业图片
+import microsoftIcon from '../../assets/images/microsoft-80658_640.png';
+import youtubeIcon from '../../assets/images/icon-720944_640.png';
+import insIcon from '../../assets/images/follow-826033_640.png';
+import facebookIcon from '../../assets/images/facebook-807588_640.png';
 
-
+/**
+ * 首页推荐产品数据
+ * */ 
 // 爆款推荐
 export const productList1 = [ 
   {src: producImage1, title: "埃及阿斯旺+卢克索+红海Red Sea+开罗+亚历山大12日跟团游(5钻)·【官方旗舰明星纯玩团】25人封顶|含签证小费全程餐|3晚尼罗河游轮+3晚红海全包度假村+1晚底比斯古都|升级内陆飞机|优质中文导游队伍|七大神庙+赠项目", price: "11990"},
@@ -52,3 +60,12 @@ export const productList3 = [
   {src: producImage9, title: "印度尼西亚巴厘岛7日5晚私家团(5钻)·A线独栋泳...", price: "5021"},
 ]
 
+/**
+ * 首页合作企业数据
+ * */ 
+export const partnerList = [ 
+  {src: microsoftIcon, title: "Microsoft"},
+  {src: youtubeIcon, title: "Youtube"},
+  {src: insIcon, title: "Ins"},
+  {src: facebookIcon, title: "Facebook"},
+]
