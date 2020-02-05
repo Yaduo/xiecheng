@@ -3,7 +3,7 @@ import './style.less'
 import { Layout, Breadcrumb } from 'antd';
 import { Header } from '../Header'
 import { Footer } from '../Footer'
-
+const { Content } = Layout
 interface PropsType {
   children: React.ReactNode
   breadcrumbItems?: string[]
@@ -13,7 +13,7 @@ export const MainLayout: React.FC<PropsType> = (props) => {
   return (
      <Layout className='main-layout'>
       <Header />
-      <Layout.Content>
+      <Content>
         <div className="page-content">
           { props.breadcrumbItems 
           ? <Breadcrumb style={{marginTop: 20}}>
@@ -25,7 +25,7 @@ export const MainLayout: React.FC<PropsType> = (props) => {
           }
           { props.children }
         </div>
-      </Layout.Content>
+      </Content>
       <Footer />
      </Layout>
   )
