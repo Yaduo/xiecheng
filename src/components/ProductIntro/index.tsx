@@ -37,6 +37,8 @@ export const ProductIntro: React.FC<PropsType> = (props) => {
         <Descriptions.Item label="积分">{props.points}</Descriptions.Item>
         <Descriptions.Item label="折扣">{props.discount}</Descriptions.Item>
         <Descriptions.Item label="评价">
+          {/* 字符串->数字的转换可以使用 parseInt 或者 parseFloat, 但是太麻烦了 */}
+          {/* Typescript 可以使用 + 或 Number() 来做字符串->数字的转换 */}
           <Rate allowHalf defaultValue={+props.rating} />
           <Text strong>{props.rating}</Text>
         </Descriptions.Item>
