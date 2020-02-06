@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Home.less"
+import { Link } from "react-router-dom";
 import { Row, Col, Carousel } from 'antd';
 import { MainLayout, Sider, ProductCollection, BusinessPartners } from '../../components'
 
@@ -22,16 +23,16 @@ export const Home: React.FC = () => {
           <Col span={18}>
             <Carousel autoplay>
               <div>
-                <h3>1</h3>
+                <Link to={'detail/1'}><h3>1</h3></Link>
               </div>
               <div>
-                <h3>2</h3>
+                <Link to={'detail/1'}><h3>2</h3></Link>
               </div>
               <div>
-                <h3>3</h3>
+                <Link to={'detail/1'}><h3>3</h3></Link>
               </div>
               <div>
-                <h3>4</h3>
+                <Link to={'detail/1'}><h3>4</h3></Link>
               </div>
             </Carousel>
           </Col>
