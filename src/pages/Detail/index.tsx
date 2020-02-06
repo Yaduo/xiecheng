@@ -1,8 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Row, Col  } from 'antd';
+import { Row, Col, DatePicker } from 'antd';
 import { MainLayout, ProductIntro } from '../../components'
 import { basicInfoMockData } from './mockup'
+const { RangePicker } = DatePicker;
 
 export const Detail: React.FC = () => {
   
@@ -14,7 +15,7 @@ export const Detail: React.FC = () => {
     >
       <div style={{marginTop: 20, background: 'white'}}>
         <Row>
-          <Col span={14}>
+          <Col span={13}>
             <ProductIntro
               title={basicInfoMockData.title}
               shortDescription={basicInfoMockData.shortDescription}
@@ -26,8 +27,13 @@ export const Detail: React.FC = () => {
               pictures={basicInfoMockData.picturesUrl}
             />
           </Col>
-          <Col span={10}>
-            
+          <Col span={11}>
+            <RangePicker 
+              open 
+              style={{
+                marginTop: 20
+              }}
+            />
           </Col>
         </Row>
       </div>
