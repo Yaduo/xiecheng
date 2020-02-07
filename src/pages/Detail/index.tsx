@@ -1,10 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Row, Col, DatePicker, Anchor, Menu, Typography, Divider } from 'antd';
-import { MainLayout, ProductIntro } from '../../components'
-import { basicInfoMockData } from './mockup'
+import { Row, Col, DatePicker, Anchor, Menu, Typography, Divider, Tooltip } from 'antd';
+import { MainLayout, ProductIntro, ProductComments } from '../../components'
+import { basicInfoMockData, commentMockData } from './mockup'
 const { RangePicker } = DatePicker;
-const { SubMenu } = Menu;
 const { Link } = Anchor;
 const { Title } = Typography;
 
@@ -93,10 +92,13 @@ export const Detail: React.FC = () => {
       </div>
 
       {/* 商品评价*/}
-      <div id='product-comments' style={{background: "white", marginTop: 20, paddingTop: 20}}>
+      <div id='product-comments' style={{background: "white", marginTop: 20, paddingTop: 20, paddingBottom: 20}}>
         <Divider orientation="center">
           <Title level={3} >用户评价</Title>
         </Divider>
+        <div style={{margin: 40}}>
+          <ProductComments data={commentMockData}/>
+        </div>
       </div>
 
     </MainLayout>
