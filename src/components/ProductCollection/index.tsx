@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
 import { Link } from "react-router-dom";
 import { Row, Col, Typography, Divider } from 'antd';
-
 const { Title, Text } = Typography;
 
 interface PropsType {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Divider } from 'antd';
-import { MainLayout, Filter } from '../../components'
+import { MainLayout, Filter, ProductList } from '../../components'
+import { mockData } from './mockup'
+import { Link } from "react-router-dom";
 
 export const Search: React.FC = () => {
 
@@ -24,8 +26,8 @@ export const Search: React.FC = () => {
         </div>
 
         {/* 产品列表 */}
-        <div>
-          产品列表
+        <div style={{padding: 20, marginTop: 20, background: 'white'}}>
+          <ProductList data={mockData}/>
         </div>
     </MainLayout>
   )

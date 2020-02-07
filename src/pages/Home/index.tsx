@@ -3,11 +3,10 @@ import "./Home.less"
 import { Link } from "react-router-dom";
 import { Row, Col, Carousel } from 'antd';
 import { MainLayout, Sider, ProductCollection, BusinessPartners } from '../../components'
-
+import { productList1, productList2, productList3, partnerList } from './mockup';
 import sideImage from '../../assets/images/sider_2019_12-09.png';
 import sideImage2 from '../../assets/images/sider_2019_02-04.png';
 import sideImage3 from '../../assets/images/sider_2019_02-04-2.png';
-import { productList1, productList2, productList3, partnerList } from './mockup';
 
 export const Home: React.FC = () => {
   return (
