@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import './Header.less'
+import { useHistory } from 'react-router-dom';
 import { Layout, Menu, Typography, Input, Button, Dropdown, Icon } from 'antd';
 const { Title, Text } = Typography;
 const { Search } = Input;
@@ -14,6 +15,13 @@ const menu = (
 );
 
 export const Header: React.FC = (props) => {
+
+  const history = useHistory();
+
+  const onSearch = (keywords) => {
+    history.push('/search/'+keywords);
+  }
+
   return (
     <div className='header'>
       <div className="top-header" >
@@ -40,7 +48,7 @@ export const Header: React.FC = (props) => {
         </Menu>
         <Search
           placeholder="请输入旅游目的地、主题、或关键字"
-          onSearch={value => console.log(value)}
+          onSearch={(keywords)=>onSearch(keywords)}
           style={{ width: 400, lineHeight: '64px', float:"right" }}
         />
       </Layout.Header>

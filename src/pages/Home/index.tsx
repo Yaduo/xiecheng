@@ -12,7 +12,7 @@ import { productList1, productList2, productList3, partnerList } from './mockup'
 export const Home: React.FC = () => {
   return (
     <MainLayout
-      breadcrumbItems={['首页', "旅游", "国内游"]}
+      breadcrumbItems={['首页', "旅游"]}
     >
       <div className="home-page">
         {/* 幻灯片产品推荐 */}

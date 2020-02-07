@@ -15,6 +15,7 @@ export const Detail: React.FC = () => {
     <MainLayout
       breadcrumbItems={['首页', "旅游", "详情"]}
     >
+      {/* 产品简介 与 日期选择 */}
       <div style={{marginTop: 20, background: 'white'}}>
         <Row>
           <Col span={13}>
