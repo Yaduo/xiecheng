@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Divider } from 'antd';
-import { MainLayout, Filter, ProductList } from '../../components'
+import { Filter, ProductList } from '../../components'
+import { MainLayout } from '../../layouts'
 import { mockData } from './mockup'
-import { Link } from "react-router-dom";
 
 export const Search: React.FC = () => {
 

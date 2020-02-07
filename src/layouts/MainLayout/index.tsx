@@ -1,9 +1,11 @@
 import React from 'react';
-import './style.less'
+import './MainLayout.less'
 import { Layout, Breadcrumb } from 'antd';
-import { Header } from '../Header'
-import { Footer } from '../Footer'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+
 const { Content } = Layout
+
 interface PropsType {
   children: React.ReactNode
   breadcrumbItems?: string[]

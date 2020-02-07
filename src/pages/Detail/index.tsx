@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Row, Col, DatePicker, Anchor, Menu, Typography, Divider, Tooltip } from 'antd';
-import { MainLayout, ProductIntro, ProductComments } from '../../components'
+import { ProductIntro, ProductComments } from '../../components'
+import { MainLayout } from '../../layouts'
 import { basicInfoMockData, commentMockData } from './mockup'
 const { RangePicker } = DatePicker;
 const { Link } = Anchor;
