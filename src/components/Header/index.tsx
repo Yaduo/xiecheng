@@ -44,7 +44,7 @@ export const Header: React.FC = (props) => {
           style={{ lineHeight: '64px', float:"right", marginLeft: 15 }}
         >
           <Group>
-            <Button>注册</Button>
+            <Button><Link to="/Register">注册</Link></Button>
             <Button><Link to="/SignIn">登陆</Link></Button>
           </Group>
         </Menu>

@@ -1,13 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom';
+import { UserLayout } from '../../layouts'
+import RegisterForm from "./RegisterForm"
 
 export const Register: React.FC = () => {
-  const paramaters = useParams() as any;
   return (
-    <div>
-      <div>
-        register form
-      </div>
-    </div>
+    <UserLayout>
+      <RegisterForm />
+    </UserLayout>
   )
 }
