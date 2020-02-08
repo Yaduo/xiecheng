@@ -17,7 +17,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
       </Divider>
       <Row>
         <Col span={4}>
-          <img 
+          <img
+            alt='detail' 
             src={props.sideImage} 
             style={{ width: 200, display: 'block', marginLeft: 'auto', marginRight: 'auto' }} 
           />
@@ -26,7 +27,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
           <Row>
             <Col span={12}>
               <Link to={'detail/'+props.products[0].id}>
-                <img 
+                <img
+                  alt='detail' 
                   src={props.products[0].src} 
                   style={{ 
                     width: '90%', 
@@ -46,7 +48,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
               <Row>
                 <Col span={12}>
                   <Link to={'detail/'+props.products[1].id}>
-                    <img 
+                    <img
+                      alt='detail' 
                       src={props.products[1].src} 
                       style={{width: 260, height: 150}} 
                     />
@@ -58,7 +61,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                 </Col>
                 <Col span={12}>
                   <Link to={'detail/'+props.products[2].id}>
-                    <img 
+                    <img
+                      alt='detail' 
                       src={props.products[2].src} 
                       style={{width: 260, height: 150, marginLeft: 20}} 
                     />
@@ -73,6 +77,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                 <Col span={12}>
                   <Link to={'detail/'+props.products[3].id}>
                     <img 
+                      alt='detail'
                       src={props.products[3].src} 
                       style={{width: 260, height: 150, marginTop: 20}} 
                     />
@@ -85,6 +90,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                 <Col span={12}>
                   <Link to={'detail/'+props.products[4].id}>
                     <img 
+                      alt='detail'
                       src={props.products[4].src} 
                       style={{width: 260, height: 150, marginTop: 20, marginLeft: 20}} 
                     />
@@ -100,7 +106,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
           <Row style={{marginTop: 20}}>
             <Col span={6}>
               <Link to={'detail/'+props.products[5].id}>
-                <img 
+                <img
+                  alt='detail' 
                   src={props.products[5].src} 
                   style={{width: 260, height: 150}} 
                 />
@@ -112,7 +119,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
             </Col>
             <Col span={6}>
               <Link to={'detail/'+props.products[6].id}>
-                <img 
+                <img
+                  alt='detail' 
                   src={props.products[6].src} 
                   style={{width: 260, height: 150}} 
                 />
@@ -124,7 +132,8 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
             </Col>
             <Col span={6}>
               <Link to={'detail/'+props.products[7].id}>
-                <img 
+                <img
+                  alt='detail' 
                   src={props.products[7].src} 
                   style={{width: 260, height: 150}} 
                 />
@@ -137,6 +146,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
             <Col span={6}>
               <Link to={'detail/'+props.products[8].id}>
                 <img 
+                  alt='detail'
                   src={props.products[8].src} 
                   style={{width: 260, height: 150}} 
                 />

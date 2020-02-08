@@ -46,7 +46,7 @@ export const ProductIntro: React.FC<PropsType> = (props) => {
       <Row>
         {props.pictures.map(pic =>
           <Col span='6' key={'pic'}>
-            <img src={pic} style={{ width: '90%', height: 100 }} />
+            <img alt='product' src={pic} style={{ width: '90%', height: 100 }} />
           </Col>
         )}
       </Row>

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./SignInForm.less"
+import { Link } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { FormComponentProps } from "antd/lib/form/Form";
 
@@ -44,13 +45,13 @@ const SignInFormComponent: React.FC<FormComponentProps> = (props) => {
           valuePropName: 'checked',
           initialValue: true,
         })(<Checkbox className='login-form-remember'>Remember me</Checkbox>)}
-        <a className="login-form-forgot" href="">
+        <Link className="login-form-forgot" to="/">
           Forgot password
-        </a>
+        </Link>
         <Button type="primary" htmlType="submit" className="login-form-button">
           Log in
         </Button>
-        Or <a href="">register now!</a>
+        Or <Link to="/Register">register now!</Link>
       </Form.Item>
     </Form>
   )
