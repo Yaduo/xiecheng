@@ -1,13 +1,41 @@
-import React from 'react';
-import { Row, Col, DatePicker, Anchor, Menu, Typography, Divider } from 'antd';
+import React, {useEffect, useState} from 'react';
+import { Row, Col, DatePicker, Anchor, Menu, Typography, Divider, Spin } from 'antd';
+import { useParams } from "react-router-dom";
 import { ProductIntro, ProductComments } from '../../components'
 import { MainLayout } from '../../layouts'
-import { basicInfoMockData, commentMockData } from './mockup'
+import { commentMockData } from './mockup'
+import image0 from '../../assets/images/louvre-102840_640.jpg'
+import image1 from '../../assets/images/japan-2014618_640.jpg'
+import image2 from '../../assets/images/ocean-829715_640.jpg'
+import image3 from '../../assets/images/osaka-2159435_640.jpg'
+
 const { RangePicker } = DatePicker;
 const { Link } = Anchor;
 const { Title } = Typography;
 
 export const Detail: React.FC = () => {
+
+  const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState({} as any);
+
+  useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      const response = await fetch(`https://localhost:3001/api/touristRoutes/${id}`);
+      const result = await response.text()
+      setProduct(JSON. parse(result))
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+
+  if(loading) {
+    return <Spin />
+  }
+
   return (
     <MainLayout
       breadcrumbItems={['首页', "旅游", "详情"]}
@@ -17,14 +45,14 @@ export const Detail: React.FC = () => {
         <Row>
           <Col span={13}>
             <ProductIntro
-              title={basicInfoMockData.title}
-              shortDescription={basicInfoMockData.shortDescription}
-              price={basicInfoMockData.price}
-              coupons={basicInfoMockData.coupons}
-              points={basicInfoMockData.points}
-              discount={basicInfoMockData.discount}
-              rating={basicInfoMockData.rating}
-              pictures={basicInfoMockData.picturesUrl}
+              title={product.title}
+              shortDescription={product.description}
+              price={product.originalPrice}
+              coupons={product.coupons}
+              points={product.points}
+              discount={product.price}
+              rating={product.rating}
+              pictures={[image0, image1, image2, image3]}
             />
           </Col>
           <Col span={11}>
@@ -62,7 +90,7 @@ export const Detail: React.FC = () => {
           <Title level={3} >产品特色</Title>
         </Divider>
         <div 
-          dangerouslySetInnerHTML={{ __html: basicInfoMockData.features }}
+          dangerouslySetInnerHTML={{ __html: product.features }}
           style={{margin: 50}}
         />
       </div>
@@ -73,7 +101,7 @@ export const Detail: React.FC = () => {
           <Title level={3} >费用</Title>
         </Divider>
         <div 
-          dangerouslySetInnerHTML={{ __html: basicInfoMockData.fees }} 
+          dangerouslySetInnerHTML={{ __html: product.fees }} 
           style={{margin: 50}}
         />
       </div>
@@ -84,7 +112,7 @@ export const Detail: React.FC = () => {
           <Title level={3} >预订须知</Title>
         </Divider>
         <div 
-          dangerouslySetInnerHTML={{ __html: basicInfoMockData.notes }} 
+          dangerouslySetInnerHTML={{ __html: product.notes }} 
           style={{margin: 50}}
         />
       </div>

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
 import { List, Rate, Icon } from 'antd';
+import image from '../../assets/images/japan-2014618_640.jpg'
 
 interface PropsType {
   data: {id:string, title:string, shortDescription:string, longDescription:string, imageSrc:string, rating:string|number, comments:string|number, likes:string|number}[]
@@ -35,7 +36,7 @@ export const ProductList: React.FC<PropsType> = (props) => {
             <img
               width={272}
               alt="logo"
-              src={item.imageSrc}
+              src={image}
             />
           }
         >

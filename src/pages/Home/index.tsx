@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Home.less"
 import { Link } from "react-router-dom";
-import { Row, Col, Carousel } from 'antd';
+import { Row, Col, Carousel, Spin } from 'antd';
 import { Sider, ProductCollection, BusinessPartners } from '../../components'
 import { MainLayout } from '../../layouts'
-import { productList1, productList2, productList3, partnerList } from './mockup';
+import { partnerList } from './mockup';
 import sideImage from '../../assets/images/sider_2019_12-09.png';
 import sideImage2 from '../../assets/images/sider_2019_02-04.png';
 import sideImage3 from '../../assets/images/sider_2019_02-04-2.png';
 
 export const Home: React.FC = () => {
+
+  const [loading, setLoading] = useState(true);
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    setLoading(true);
+    const fetchTouristRoutes = async () => {
+      const response = await fetch('https://localhost:3001/api/touristRoutes');
+      const result = await response.text()
+      setProductList(JSON. parse(result))
+      setLoading(false);
+    };
+
+    fetchTouristRoutes();
+  }, []);
+
+  if(loading) {
+    return <Spin />
+  }
+
   return (
     <MainLayout
       breadcrumbItems={['首页', "旅游"]}
@@ -43,21 +63,21 @@ export const Home: React.FC = () => {
           <ProductCollection 
             title='爆款推荐'
             sideImage={sideImage}
-            products={productList1}
+            products={productList}
           />
         </div>
         <div style={{marginTop: 40}}>
           <ProductCollection 
             title='新品上市'
             sideImage={sideImage2}
-            products={productList2}
+            products={productList}
           />
         </div>
         <div style={{marginTop: 40}}>
           <ProductCollection 
             title='国内游推荐'
             sideImage={sideImage3}
-            products={productList3}
+            products={productList}
           />
         </div>
 

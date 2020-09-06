@@ -7,7 +7,7 @@ const App: React.FC = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/search/:keywords" component={Search} />
+        <Route path="/search/:keywords?" component={Search} />
         <Route path="/detail/:id" component={Detail} />
         <Route path="/SignIn" component={SignIn} />
         <Route path="/Register" component={Register} />

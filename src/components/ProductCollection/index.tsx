@@ -1,7 +1,19 @@
 import React, {Fragment} from 'react';
 import { Link } from "react-router-dom";
 import { Row, Col, Typography, Divider } from 'antd';
+
+import img0 from '../../assets/images/castle-1736779_640.jpg'
+import img1 from '../../assets/images/louvre-102840_640.jpg'
+import img2 from '../../assets/images/japan-2014618_640.jpg'
+import img3 from '../../assets/images/ocean-829715_640.jpg'
+import img4 from '../../assets/images/osaka-2159435_640.jpg'
+import img5 from '../../assets/images/andromeda-galaxy-755442_640.jpg'
+import img6 from '../../assets/images/milky-way-1023340_640.jpg'
+import img7 from '../../assets/images/paris-843229_640.jpg'
+import img8 from '../../assets/images/osaka-castle-1398116_640.jpg'
+
 const { Title, Text } = Typography;
+
 
 interface PropsType {
   title: string,
@@ -29,7 +41,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
               <Link to={'detail/'+props.products[0].id}>
                 <img
                   alt='detail' 
-                  src={props.products[0].src} 
+                  src={img0} 
                   style={{ 
                     width: '90%', 
                     height: 320, 
@@ -50,7 +62,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                   <Link to={'detail/'+props.products[1].id}>
                     <img
                       alt='detail' 
-                      src={props.products[1].src} 
+                      src={img1} 
                       style={{width: 260, height: 150}} 
                     />
                     <div>
@@ -63,7 +75,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                   <Link to={'detail/'+props.products[2].id}>
                     <img
                       alt='detail' 
-                      src={props.products[2].src} 
+                      src={img2} 
                       style={{width: 260, height: 150, marginLeft: 20}} 
                     />
                     <div>
@@ -78,7 +90,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                   <Link to={'detail/'+props.products[3].id}>
                     <img 
                       alt='detail'
-                      src={props.products[3].src} 
+                      src={img3} 
                       style={{width: 260, height: 150, marginTop: 20}} 
                     />
                     <div>
@@ -91,7 +103,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
                   <Link to={'detail/'+props.products[4].id}>
                     <img 
                       alt='detail'
-                      src={props.products[4].src} 
+                      src={img4} 
                       style={{width: 260, height: 150, marginTop: 20, marginLeft: 20}} 
                     />
                     <div>
@@ -108,7 +120,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
               <Link to={'detail/'+props.products[5].id}>
                 <img
                   alt='detail' 
-                  src={props.products[5].src} 
+                  src={img5} 
                   style={{width: 260, height: 150}} 
                 />
                 <div>
@@ -121,7 +133,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
               <Link to={'detail/'+props.products[6].id}>
                 <img
                   alt='detail' 
-                  src={props.products[6].src} 
+                  src={img6} 
                   style={{width: 260, height: 150}} 
                 />
                 <div>
@@ -134,7 +146,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
               <Link to={'detail/'+props.products[7].id}>
                 <img
                   alt='detail' 
-                  src={props.products[7].src} 
+                  src={img7} 
                   style={{width: 260, height: 150}} 
                 />
                 <div>
@@ -147,7 +159,7 @@ export const ProductCollection: React.FC<PropsType> = (props) => {
               <Link to={'detail/'+props.products[8].id}>
                 <img 
                   alt='detail'
-                  src={props.products[8].src} 
+                  src={img8} 
                   style={{width: 260, height: 150}} 
                 />
                 <div>
